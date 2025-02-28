@@ -10,7 +10,7 @@ $data = json_decode(file_get_contents("php://input"), true);
 
 if (isset($data['email'])) {
     $email = $data['email'];
-    $sql = "SELECT name, dp FROM tbl_account WHERE email = ?";
+    $sql = "SELECT fname, dp FROM tbl_account WHERE email = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("s", $email);
 
@@ -21,7 +21,7 @@ if (isset($data['email'])) {
             $imageBase64 = base64_encode($row['dp']);
             echo json_encode([
                 'status' => 'found',
-                'name' => $row['name'],
+                'fname' => $row['fname'],
                 'image' => $imageBase64
             ]);
         } else {
