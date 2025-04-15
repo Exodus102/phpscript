@@ -7,7 +7,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET");
 header('Access-Control-Allow-Headers: Content-Type');
 
-require '../db_connection.php';
+require '../index.php';
 
 $sql = "SELECT customer_type FROM tbl_customer_type";
 $result = $conn->query($sql);

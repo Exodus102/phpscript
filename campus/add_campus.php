@@ -7,7 +7,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header('Access-Control-Allow-Headers: Content-Type');
 
-require '../db_connection.php';
+require '../index.php';
 
 $campus = $_POST['campus'];
 

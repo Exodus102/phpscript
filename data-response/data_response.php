@@ -7,7 +7,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET");
 header('Access-Control-Allow-Headers: Content-Type');
 
-require '../db_connection.php';
+require '../index.php';
 
 
 $column_query = "SHOW COLUMNS FROM tbl_response";

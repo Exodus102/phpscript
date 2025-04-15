@@ -7,14 +7,12 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
 
-require '../db_connection.php';
+require '../index.php';
 
 $division = $_POST['division'];
 $unit = $_POST['unit'];
-$email = $_POST['email'];
-$password = $_POST['password'];
 
-if (empty($division) || empty($unit) || empty($email) || empty($password)) {
+if (empty($division) || empty($unit)) {
     echo json_encode(['success' => false, 'message' => 'Please fill in all fields']);
     exit();
 }
@@ -27,7 +25,7 @@ if ($result->num_rows > 0) {
     exit();
 }
 
-$sql = "INSERT INTO tbl_office_list (division, office, email, password) VALUES ('$division', '$unit', '$email', '$password')";
+$sql = "INSERT INTO tbl_office_list (division, office) VALUES ('$division', '$unit')";
 
 if ($conn->query($sql) === TRUE) {
     $last_id = $conn->insert_id;

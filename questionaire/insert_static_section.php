@@ -4,7 +4,7 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST');
 header('Access-Control-Allow-Headers: Content-Type');
 
-require '../db_connection.php';
+require '../index.php';
 
 function getExistingQuestion($conn, $question)
 {

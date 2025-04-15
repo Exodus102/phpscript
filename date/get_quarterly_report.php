@@ -7,7 +7,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET");
 header('Access-Control-Allow-Headers: Content-Type');
 
-require '../db_connection.php';
+require '../index.php';
 $campus = "Binangonan";
 $year = isset($_GET['year']) ? intval($_GET['year']) : date("Y");
 
