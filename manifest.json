@@ -1,6 +1,6 @@
 {
-    "name": "css_website_access",
-    "short_name": "css_website_access",
+    "name": "css_website",
+    "short_name": "css_website",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
